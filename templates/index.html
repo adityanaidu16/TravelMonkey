@@ -1,0 +1,125 @@
+<!-- extend layout.html with jinja template -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+<!-- main content block in layout.html-->
+{% block main %}
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <!-- masthead header -->
+                        <h1 class="mx-auto my-0 text-uppercase">TravelTexas</h1>
+
+                        <!-- website description -->
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Browse and find attractions in Texas that cater exactly to your needs.</h2>
+
+                        <!-- Get Started button, linked to filter section -->
+                        <a class="btn btn-primary" href="#filter">Get Started</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- filter section-->
+        <section class="filter-section text-center" id="filter">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+
+                        <!-- filter heading -->
+                        <h2 class="text-white mb-4">Filter</h2>
+                        
+                        <div class="container px-5 my-5">
+                            <!-- form for filtering attractions -->
+                            <form action="#attractions" method="post">
+
+                                <!-- category query -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="category" name="category_response" aria-label="Category">
+                                        <option value="Any">Any</option>
+                                        <option value="Restaurant">Restaurants</option>
+                                        <option value="Outdoor Activity">Outdoor Activities</option>
+                                        <option value="Event/Show">Events/Shows</option>
+                                        <option value="Shopping">Shopping</option>
+                                        <option value="Themepark">Theme Parks</option>
+                                        <option value="Landmark">Landmarks</option>
+                                        <option value="Museum">Museums</option>
+                                    </select>
+                                    <label for="category">Category</label>
+                                </div>
+
+                                <!-- cost query -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="cost" name="cost_response"aria-label="Cost">
+                                        <option value="Any">Any</option>
+                                        <option value="$">$</option>
+                                        <option value="$$">$$</option>
+                                        <option value="$$$">$$$</option>
+                                    </select>
+                                    <label for="cost">Cost</label>
+                                </div>
+                                
+                                <!-- location query -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="location" name="location_response" type="text" placeholder="Location"/>
+                                    <label for="location">Location</label>
+                                </div>
+
+                                <!-- rating query -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="rating" name="rating_response"aria-label="Rating">
+                                        <option value="Any">Any</option>
+                                        <option value="3">★★★+</option>
+                                        <option value="4">★★★★+</option>
+                                        <option value="4.6">★★★★★</option>
+                                    </select>
+                                    <label for="rating">Rating</label>
+                                </div>
+                                
+                                <!-- time query -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="time" type="time" name="time_response"/>
+                                    <label for="time">Time</label>
+                                </div>
+
+                                <!-- form submission -->
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- spacing between sections -->
+                <br><br><br><br><br>
+
+            </div>
+        </section>
+
+        <!-- displayattractions.html content -->
+        {% block attractions %}{% endblock %}
+
+        <!-- social section-->
+        <section class="contact-section" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 25%, #000 100%), url('../static/assets/img/bg-signup.jpg');">
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="https://github.com/adityanaidu16" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Made by Aditya Naidu<br>Template licensed for free by <a href="https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE" target="_blank" style="color: #cccfff">StartBootstrap</a>.</div></footer>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+{% endblock %}

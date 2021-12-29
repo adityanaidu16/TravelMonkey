@@ -1,0 +1,95 @@
+<!-- extend index.html with jinja template -->
+{% extends "index.html" %}
+
+<!-- display attractions section in index.html-->
+{% block attractions %}
+        <section class="attractions-section bg-light" id="attractions">
+            <div class="container px-4 px-lg-5">
+                
+                <!-- Featured Attraction row (displays first result)-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" style="height: 540px; width: 100%; object-fit: cover; overflow: hidden;" src="/static/images/{{ results[0][0] }}.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+
+                            <!-- attraction heading -->
+                            <h4>{{ results[0][1] }}</h4>
+                            
+                            <div class="d-flex" style="flex-direction: row;">
+                                <div class="d-flex" style="flex-direction: column; flex-basis: 50%; border-right: 1px solid #4a4e8a;">
+
+                                    <!-- label for category and location -->
+                                    <p class="mb-0 text-black-50">{{ results[0][2] }}</p><p class="mb-0 fs-6" style="color:#4a4e8a">in {{ results[0][4] }}, TX</p>
+
+                                    <!-- label for price -->
+                                    <p class="mb-0 text-black-50">{{ results[0][3] }}</p>
+
+                                </div>
+                                <div class="d-flex" style="flex-direction: column; flex-basis: 50%;">
+
+                                    <!-- label for open timings -->
+                                    <!-- if attraction is open until midnight, print "Open all day" -->
+                                    {% if results[0][7] == '23:59' %}
+                                    <p class="mb-0 text-black-50"><font color="green">Open</font> all day</p>
+                                    {% else %}
+                                    <p class="mb-0 text-black-50"><font color="green">Open</font> {{ convert_time(results[0][6]) }} to {{ convert_time(results[0][7]) }}</p>
+                                    {% endif %}
+
+                                    <!-- label for rating -->
+                                    <p class="mb-0 text fs-4" style="text-align: match-parent; color:#4a4e8a">{{ results[0][5] }}</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Loop through all attractions in filtered results -->
+                {% for r in range(1, results| length) %}
+
+                <!-- Attractions -->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" style="height: 360px; width: 100%; object-fit: cover; overflow: hidden;" src="/static/images/{{ results[r][0] }}.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+
+                                    <!-- attraction heading -->
+                                    <h4 class="text-white">{{ results[r][1] }}</h4>
+
+                                    <div class="d-flex" style="flex-direction: row;">
+                                        <div class="d-flex" style="flex-direction: column; flex-basis: 50%; border-right: 1px solid #cccfff;">
+
+                                            <!-- label for category and location -->
+                                            <p class="mb-0 text-white-50">{{ results[r][2] }}</p><p class="mb-0 fs-6" style="color:#cccfff">in {{ results[r][4] }}, TX</p>
+                                            
+                                            <!-- label for price -->
+                                            <p class="mb-0 text-white-50">{{ results[r][3] }}</p>
+
+                                        </div>
+                                        <div class="d-flex" style="flex-direction: column; flex-basis: 50%;">
+
+                                            <!-- label for open timings -->
+                                            <!-- if attraction is open until midnight, print "Open all day" -->
+                                            {% if results[r][7] == '23:59' %}
+                                            <p class="mb-0 text-white-50"><font color="green">Open</font> all day</p>
+                                            {% else %}
+                                            <p class="mb-0 text-white-50"><font color="green">Open</font> {{ convert_time(results[r][6]) }} to {{ convert_time(results[r][7]) }}</p>
+                                            {% endif %}
+
+                                            <!-- label for rating -->
+                                            <p class="mb-0 text fs-3" style="text-align: match-parent; color:#cccfff; padding-top: 0.5rem;">{{ results[r][5] }}</p>
+
+                                        </div>
+                                    </div>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+{% endblock %}

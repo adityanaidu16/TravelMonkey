@@ -1,0 +1,62 @@
+id,name,category,cost,location,rating,open,close
+1,Texas State Capitol,Landmark,$,Austin,4.7,7:00,22:00
+2,The Alamo,Landmark,$,San Antonio,4.6,9:00,17:30
+3,The Driskill,Landmark,$$$,Austin,4.5,0:00,23:59
+4,Mount Bonnell,Landmark,$,Austin,4.6,0:00,23:59
+5,Sundance Square,Landmark,$$,Fort Worth,4.6,6:00,23:00
+6,Fort Worth Stockyards,Landmark,$$,Fort Worth,4.7,10:00,17:00
+7,Reunion Tower,Landmark,$$,Dallas,4.5,10:30,21:00
+8,Kemah Boardwalk,Landmark,$$,Kemah,4.5,12:00,20:00
+9,Galveston Island Historic Pleasure Pier,Landmark,$$,Galveston,4.4,11:00,23:00
+10,San Antonio River Walk,Landmark,$$,San Antonio,4.7,0:00,23:59
+11,San Antonio Missions National Historical Park,Landmark,$,San Antonio,4.7,9:00,17:00
+12,San Fernando Cathedral,Landmark,$,San Antonio,4.8,9:00,17:00
+13,Mission San Jose,Landmark,$,San Antonio,4.8,8:00,17:00
+14,LBJ Presidential Library,Museum,$,Austin,4.6,9:00,17:00
+15,Bullock Texas State History Museum,Museum,$,Austin,4.7,10:00,17:00
+16,Dallas Museum of Art,Museum,$,Dallas,4.7,11:00,17:00
+17,Perot Museum of Nature and Science,Museum,$,Dallas,4.7,10:00,17:00
+18,Kimbell Art Museum,Museum,$,Fort Worth,4.8,10:00,17:00
+19,The Sixth Floor Museum at Dealey Plaza,Museum,$$,Dallas,4.6,10:00,17:00
+20,Dallas Zoo,Museum,$,Dallas,4.5,9:00,16:00
+21,"The Museum of Fine Arts, Houston",Museum,$,Houston,4.7,10:00,19:00
+22,Houston Zoo,Museum,$$,Houston,4.6,9:00,16:00
+23,Space Center Houston,Museum,$$,Houston,4.6,9:00,17:00
+24,Houston Museum of Natural Science,Museum,$$,Houston,4.8,9:00,17:00
+25,San Antonio Zoo,Museum,$,San Antonio,4.5,10:00,21:00
+26,Dallas World Aquarium,Museum,$$,Dallas,4.4,8:30,17:00
+27,Galleria Dallas,Shopping,$$$,Dallas,4.5,9:00,21:00
+28,NorthPark Center,Shopping,$$$,Dallas,4.6,10:00,21:00
+29,Stonebriar Centre,Shopping,$$$,Frisco,4.5,10:00,21:00
+30,The Galleria,Shopping,$$$,Houston,4.5,10:00,22:00
+31,Historic Market Square,Shopping,$$,Houston,4.6,10:00,17:00
+32,Six Flags Fiesta Texas,Themepark,$$,San Antonio,4.4,10:00,21:00
+33,Six Flags Over Texas,Themepark,$$,Arlington,4.4,12:00,22:00
+34,SeaWorld San Antonio,Themepark,$$,San Antonio,4.4,10:00,21:00
+35,Moody Gardens,Themepark,$$,Galveston,4.4,10:00,21:00
+36,Lady Bird Lake Hike-and-Bike Trail,Outdoor Activity,$,Austin,4.7,0:00,23:59
+37,McKinney Falls State Park,Outdoor Activity,$,Austin,4.6,8:00,22:00
+38,Zilker Botanical Garden,Outdoor Activity,$,Austin,4.6,9:00,17:00
+39,The Dallas Arboretum and Botanical Garden,Outdoor Activity,$,Dallas,4.7,9:00,17:00
+40,Dinosaur Valley State Park,Outdoor Activity,$,Glen Rose,4.7,8:00,17:00
+41,Galveston Island State Park,Outdoor Activity,$,Galveston,4.5,7:00,22:00
+42,Hemisfair,Outdoor Activity,$,San Antonio,4.7,5:00,23:59
+43,Big Bend National Park,Outdoor Activity,$$,Big Bend National Park,4.8,0:00,23:59
+44,Guadalupe Mountains National Park,Outdoor Activity,$$,El Paso,4.7,8:00,16:30
+45,Palo Duro Canyon State Park,Outdoor Activity,$$,Canyon,4.8,7:00,21:00
+46,South Padre Island,Outdoor Activity,$$,South Padre Island,4.6,0:00,23:59
+47,Padre Island National Seashore,Outdoor Activity,$$,Corpus Christi,4.8,0:00,23:59
+48,Formula 1 United States Grand Prix at Circuit of The Americas,Event/Show,$$$,Austin,4.6,14:00,16:00
+49,Cowboys at AT&T Stadium,Event/Show,$$$,Arlington,4.7,12:00,15:00
+50,Astros at Minute Maid Park,Event/Show,$$,Houston,4.7,19:00,21:30
+51,Coldplay at NRG Stadium,Event/Show,$$$,Houston,4.6,19:00,22:00
+52,Justin Bieber at American Airlines Center,Event/Show,$$$,Dallas,4.6,19:30,22:00
+53,"Tyler, The Creator at Toyota Center",Event/Show,$$$,Houston,4.6,19:00,22:00
+54,Emmer & Rye,Restaurant,$$$,Austin,4.5,17:30,22:00
+55,Franklin Barbecue,Restaurant,$$,Austin,4.7,11:00,15:00
+56,Kemuri Tatsu-Ya,Restaurant,$$,Austin,4.5,17:30,22:00
+57,Odd Duck,Restaurant,$$$,Austin,4.6,17:00,21:00
+58,Cattleack Barbeque,Restaurant,$$,Dallas,4.7,10:30,14:00
+59,Hugo's,Restaurant,$$$,Houston,4.6,15:00,21:00
+60,Killen's Steakhouse,Restaurant,$$$,Houston,4.6,16:00,21:00
+61,The Original Ninfa's on Navigation,Restaurant,$$,Houston,4.3,11:00,22:00

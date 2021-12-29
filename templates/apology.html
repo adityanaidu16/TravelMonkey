@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block attractions %}
+    <section class="attractions-section bg-light" id="attractions">
+      <div class="center" style="color: #1d1d1d">
+        <center><h3 style="color: #1d1d1d">{{ code }}</h3></center>
+        <p><center>{{ message }}</center></p>
+        <center><li class="nav-item"><a class="nav-link" href="#filter">Try Again</a></li></center>
+      </div>
+    </section>
+{% endblock %}
