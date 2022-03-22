@@ -1,0 +1,87 @@
+<!-- extend layout.html with jinja template -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Help
+{% endblock %}
+
+<!-- main content block in layout.html-->
+{% block main %}
+
+<!-- help/FAQ section -->
+<section class="faq-container">
+    <div class="container px-4 px-lg-5">
+        
+        <!-- help heading -->
+        <h1 class="faq-heading" style="color:antiquewhite">Help</h1>
+        <h1>────</h1>
+            
+            <!-- first help guideline/FAQ -->
+            <div class="faq-one">
+                <!-- faq question -->
+                <h3 class="faq-page">Getting Started Guide</h3>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>To get started in your search for attractions:
+                        <br>1.) Click "Get Started" on home page or "Filter" on upper right-hand corner
+                        <br>2.) Fill in desired filters--leave empty to show all attractions
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note: Filters are case-insensitive
+                        <br>3.) Click "Submit" to view list of attractions that fit criteria and information</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            
+            <!-- second help guideline/FAQ -->
+            <div class="faq-two">
+                <!-- faq question -->
+                <h3 class="faq-page">No results found for my desired filters?</h3>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>	TravelTexas aims to highlight only the best attractions and interests in Texas. As we are extremely selective,
+                        you may have to expand your filters to find a thorough and complete list of potential options. As we grow, we will
+                        be exceedingly active in adding a more diverse assortment of places to visit!</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <!-- third help guideline/FAQ -->
+            <div class="faq-three">
+                <!-- faq question -->
+                <h3 class="faq-page">What is the score rating?</h3>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Our score ratings are derived from Google Reviews, which has thousands of testimonials and give an accurate
+                        depication of how past visitors felt about their experience.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <!-- fourth help guideline/FAQ -->
+            <div class="faq-four">
+                <!-- faq question -->
+                <h3 class="faq-page">Where can I find additional information or book/reserve an attraction?</h3>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Additional information and bookings cannot currently be found within TravelTexas, however, by simply searching
+                        the attraction via search engine, you can find the official websites. We advise that you ensure the web address is
+                        secure and starts with "https://www..." for a safe booking experience and accurate, up-to-date information.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <!-- fifth help guideline/FAQ -->
+            <div class="faq-five">
+                <!-- faq question -->
+                <h3 class="faq-page">Coronavirus (COVID-19) information for experiences</h3>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Be sure to double-check with local guidelines to ensure a smooth travel experience, as well as ensure the
+                        availabilty of specific attractions by checking official websites.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+    </div>
+</section>
+
+
+{% endblock %}

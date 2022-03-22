@@ -51,7 +51,7 @@ def attractions():
         
         # return error message if no results are found
         if not results:
-            return apology("No results found", 200)
+            return apology("No results found", 400)
 
         # render displayattractions.html and pass results
         return render_template('displayattractions.html', results=results, convert_time=convert_time)
@@ -59,5 +59,10 @@ def attractions():
     else:
         # render index.html until HTML form is submitted
         return render_template('index.html')
+
+# render help.html when Help is clicked on nav-bar
+@app.route("/help")
+def help():
+    return render_template('help.html')
 
 
