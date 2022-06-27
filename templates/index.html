@@ -13,10 +13,10 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <!-- masthead header -->
-                        <h1 class="mx-auto my-0 text-uppercase">TravelTexas</h1>
+                        <h1 class="mx-auto my-0 text-uppercase">TravelMonkey</h1>
 
                         <!-- website description -->
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Browse and find attractions in Texas that cater exactly to your needs.</h2>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Browse and find attractions around the world that cater exactly to your needs.</h2>
 
                         <!-- Get Started button, linked to filter section -->
                         <a class="btn btn-primary" href="#filter">Get Started</a>
@@ -42,33 +42,77 @@
                                 <!-- category query -->
                                 <div class="form-floating mb-3">
                                     <select class="form-select" id="category" name="category_response" aria-label="Category">
-                                        <option value="Any">Any</option>
-                                        <option value="Restaurant">Restaurants</option>
-                                        <option value="Outdoor Activity">Outdoor Activities</option>
-                                        <option value="Event/Show">Events/Shows</option>
-                                        <option value="Shopping">Shopping</option>
-                                        <option value="Themepark">Theme Parks</option>
-                                        <option value="Landmark">Landmarks</option>
-                                        <option value="Museum">Museums</option>
+                                        <option value="tourist_attraction">Any</option>
+                                        <option value="amusement_park">Amusement Park</option>
+                                        <option value="aquarium">Aquarium</option>
+                                        <option value="campground">Campground</option>
+                                        <option value="museum">Museums</option>
+                                        <option value="park">Parks</option>
+                                        <option value="restaurant">Restaurants</option>
+                                        <option value="shopping_mall">Shopping</option>
+                                        <option value="stadium">Stadiums</option>
+                                        <option value="tourist_attraction">Tourist Attractions</option>
+                                        <option value="zoo">Zoo</option>
                                     </select>
                                     <label for="category">Category</label>
                                 </div>
 
                                 <!-- cost query -->
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="cost" name="cost_response"aria-label="Cost">
-                                        <option value="Any">Any</option>
-                                        <option value="$">$</option>
-                                        <option value="$$">$$</option>
-                                        <option value="$$$">$$$</option>
-                                    </select>
-                                    <label for="cost">Cost</label>
+                                    <div style="text-align: left;">
+                                        <label for="cost" style="color: rgb(190, 190, 190)">Cost</label>
+                                    </div>
+                                    
+                                    <div>
+                                        <input id="range" type="range" class="form-range" min="0" max="4" step="1" id="cost" name="cost_response">
+
+                                        <!-- cost labels -->
+                                        <ul class="mb-0 text-white-50">
+                                            <li id="0" style="display:none; padding-right: 100%;">Free</li>
+                                            <li id="1" style="display:none; padding-right: 48.5%;" >$</li>
+                                            <li id="2" style="display:none">$$</li>
+                                        </ul>
+                                        <ul class="mb-0 text-white-50 text-right list-inline">
+                                            <li id="3" style="display:none; padding-left: 48.5%;" >$$$</li>                                     
+                                            <li id="4" style="display:none; padding-left: 94%;">$$$$</li>
+                                        </ul>
+                                        <!-- cost labels functionality -->
+                                        <script>
+                                            var slider = document.getElementById("range");
+                                            var getVal = slider.value;
+                                            var prev_val;
+
+                                            document.getElementById(getVal).style.display = "inline";
+                                            prev_val = getVal;
+                                            
+
+                                            slider.oninput = function() {
+                                                document.getElementById(prev_val).style.display = "none";
+                                                document.getElementById(this.value).style.display = "inline";
+                                                prev_val = this.value;
+                                            }
+
+                                        </script>
+                                    </div>
                                 </div>
-                                
-                                <!-- location query -->
+
+                                <!-- city query -->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="location" name="location_response" type="text" placeholder="Location"/>
-                                    <label for="location">Location</label>
+                                    <input class="form-control" id = "autocomplete" placeholder="Location" type="text" name="location_response" required/>
+                                    <label for="location">City</label>
+                                    <!-- autocomplete city functionality -->
+                                    <script>
+                                        let autocomplete;
+                                        function initAutocomplete() {
+                                            autocomplete = new google.maps.places.Autocomplete(
+                                                document.getElementById('autocomplete'),
+                                                {
+                                                    types:['(cities)'],
+                                                });
+                                        }
+                                    </script>
+                                    <script src="https://maps.googleapis.com/maps/api/js?key={{ API_KEY }}&libraries=places&callback=initAutocomplete" async defer>
+                                    </script>
                                 </div>
 
                                 <!-- rating query -->
@@ -81,11 +125,16 @@
                                     </select>
                                     <label for="rating">Rating</label>
                                 </div>
-                                
-                                <!-- time query -->
+
+                                <!-- open query -->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="time" type="time" name="time_response"/>
-                                    <label for="time">Time</label>
+                                    <div style="text-align: left;">
+                                        <label for="open" style="color: rgb(190, 190, 190)">Open Now</label>
+                                    </div>
+                                    
+                                    <div class="form-check form-switch form-switch-lg">
+                                        <input class="form-check-input" type="checkbox" id="open" name="open_response" checked>
+                                    </div>
                                 </div>
 
                                 <!-- form submission -->
@@ -106,7 +155,7 @@
         {% block attractions %}{% endblock %}
 
         <!-- social section-->
-        <section class="contact-section" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 25%, #000 100%), url('../static/assets/img/bg-signup.jpg');">
+        <section class="contact-section" style="background: linear-gradient(to bottom, rgba(116, 116, 116, 0.8) 0%, rgba(88, 88, 88, 0.6) 25%, #000 100%), url('../static/assets/img/bg-signup.jpg');">
                 <div class="social d-flex justify-content-center">
                     <a class="mx-2" href="https://github.com/adityanaidu16" target="_blank"><i class="fab fa-github"></i></a>
                 </div>

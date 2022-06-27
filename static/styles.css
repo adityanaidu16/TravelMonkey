@@ -239,16 +239,19 @@ sup {
 }
 
 a {
-  color: #64a19d;
-  text-decoration: underline;
+  color: #818177;
+  text-decoration: none;
+  transition: 0.3s;
 }
 a:hover {
-  color: #50817e;
+  color: #e2e0bd;
+  transition: 0.3s;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 pre,
@@ -7797,6 +7800,10 @@ textarea.form-control-lg {
   font-size: 1rem !important;
 }
 
+.fs-7 {
+  font-size: 0.75rem !important;
+}
+
 .fst-italic {
   font-style: italic !important;
 }
@@ -11712,4 +11719,27 @@ body {
 .faq-body {
   color: #adadad;
   line-height: 175%;
+}
+
+.form-check-input {
+  clear: left;
+}
+
+.form-switch.form-switch-lg {
+  margin-bottom: 1.5rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-lg .form-check-input {
+  height: 2rem;
+  width: calc(3rem + 0.75rem);
+  border-radius: 4rem;
+}
+
+ul {
+  display: inline;
+  padding: 0;
+}
+
+li {
+  display: inline;
 }
