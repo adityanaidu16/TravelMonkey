@@ -1,4 +1,4 @@
-# TravelTexas
+# TravelMonkey
 
 ### **DESCRIPTION**
 TravelMonkey is our [FBLA (Future Business Leaders of America)](https://www.fbla-pbl.org/) entry for the Coding & Programming event. The 2022 NLC Topic is as follows:
