@@ -11,8 +11,6 @@ from helpers import apology, convertType, formatAttractionsList, formatImage
 app = Flask(__name__)
 
 # import Google Maps API Key (stored as hidden environment variable)
-from dotenv import load_dotenv
-load_dotenv()
 API_KEY = os.environ.get('API_KEY')
 
 # render index.html by default 
