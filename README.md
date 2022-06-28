@@ -56,4 +56,4 @@ After the user submits their desired filters, the ***attractions*** section disp
     - The [Places API](https://developers.google.com/maps/documentation/places/web-service) is a service that returns information about places using HTTP requests. Places are defined within this API as establishments, geographic locations, or prominent points of interest.
     - Data is retrieved from the Google Cloud Platform when a request is made through a given endpoint with a designated API key
     - Places served this projects needs the most effectively, as it was free of cost, and gave us far more flexibility than competitors, allowing us to add features such as the autocomplete in the city query.
-    - This was our first time utilizing any API within a full-fledged project/application before, and while there were several obstacles and hiccups, the Places API made it easy to navigate and solve issues due to its widespread use
+    - This was our first time utilizing any API within a full-fledged project/application before, and while there were several obstacles, the Places API made it easy to navigate and solve issues due to its widespread use
